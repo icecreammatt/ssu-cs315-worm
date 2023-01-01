@@ -4,6 +4,7 @@
 #include <curses.h>
 #include <signal.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 const int SEC_DELAY = 0;
 const int USEC_DELAY = 800000;
