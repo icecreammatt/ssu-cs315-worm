@@ -1,2 +1,4 @@
 *.tgz
 *.*~
+Cell.o game.o getChar.o main.o ScreenImage.o WormBody.o
+*.o
