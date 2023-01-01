@@ -1,5 +1,5 @@
 worm.x: main.o game.o ScreenImage.o WormBody.o Cell.o getChar.o
-	g++ -g -o worm.x main.o game.o ScreenImage.o WormBody.o Cell.o -lcurses -ltermcap getChar.o
+	g++ -g -o worm.x main.o game.o ScreenImage.o WormBody.o Cell.o -lncurses getChar.o
 
 main.o: main.cpp game.hpp ScreenImage.hpp Cell.hpp WormBody.hpp
 	g++ -g -c  main.cpp
