@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <curses.h>
-#include <iostream>
 
 class Cell {
 public: 
