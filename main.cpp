@@ -153,8 +153,9 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
       
     }
 
-  if( munchieFound )
+  if( munchieFound  && false)
     {
+      // this bit is causing segfault
       screen->makeMunchieCell();
       munchieFound = false;
     }
