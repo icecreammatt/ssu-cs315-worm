@@ -128,8 +128,9 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
       //worm->increaseLength ( screen[ munchie.getRow(), munchie.getColumn() ] );
     }
 
-  if( ! (screen->makeWormCell( head )) )
+  if( ! (screen->makeWormCell( head )) ) {
     gameOver = true;
+  }
 
 
   // this reduces the length of the number of cells to add.
