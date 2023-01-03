@@ -10,6 +10,4 @@ Munchies can appear inside the worms body as I didn't have enough time to fully 
 
 Munchies can also appear inside of the top wall due to the same reasons that the worm can walk inside the top wall.
 
-I didn't have enough time to get it so the tail was different than the head.
-
 In the very beginning the worm can go through itself because the freepool isn't updated, but after it moves out of the initial position it will collide with itself.
