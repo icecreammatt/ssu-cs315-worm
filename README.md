@@ -17,10 +17,9 @@ Run `./worm` to start the game.
 
 ## Known issues program
 
-Score can randomly shoot up extremely high I believe there might be some uninitalized memory
+Munchies that appear inside the worm will disappear after worm completely leaves the space. Going over this space after with the worm will read from uninitialized memory
+and shoot the score up very high. This will eventually lead to a crash.
 
 Munchies can appear inside the worms body as I didn't have enough time to fully implement an auto updating free pool.
 
 Munchies can also appear inside of the top wall due to the same reasons that the worm can walk inside the top wall.
-
-In the very beginning the worm can go through itself because the freepool isn't updated, but after it moves out of the initial position it will collide with itself.
