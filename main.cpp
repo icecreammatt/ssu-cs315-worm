@@ -83,23 +83,15 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
   //  cout << row << " " << col << endl;
   
   // README
-  // WARNING!!! change to spec'd controls before turning in
-  if( moveDir == 'w' || moveDir == 'k' )
-    {
+  if( moveDir == 'w' || moveDir == 'i' ) {
       head.setLocation( row -1, col );
-    }
-  else if( moveDir == 's' || moveDir == 'j' )
-    {
+  } else if( moveDir == 's' || moveDir == 'k' ) {
       head.setLocation( row +1, col );
-    }
-  else if( moveDir == 'a' || moveDir == 'h')
-    {
+  } else if( moveDir == 'a' || moveDir == 'j') {
       head.setLocation( row , col -1 );
-    }
-  else if( moveDir == 'd' || moveDir == 'l' )
-    {
+  } else if( moveDir == 'd' || moveDir == 'l' ) {
       head.setLocation( row, col +1 );
-    }
+  }
   //  cout << head.getRow() << " " << head.getColumn() << endl;
 
   worm->addNewHead( head );
