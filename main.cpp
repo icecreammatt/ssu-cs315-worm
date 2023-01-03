@@ -18,8 +18,7 @@ void endCurses();
 bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, bool &munchieFound );
 void drawScreen( ScreenImage * screen, WormBody * worm);
 
-int main()
-{
+int main() {
   startup();
 
   //Game game
@@ -38,15 +37,14 @@ int main()
   char moveDir;
   bool munchieFound = true;
   
-  while(quit == false)
-    {
+  while(quit == false) {
       // get input
       moveDir = get_char();
       
       // run logic (returns quit)
       quit = logic(screen, worm, moveDir, score, munchieFound);
 
-    }
+  }
   
   endCurses();
 
@@ -56,24 +54,21 @@ int main()
 }
 
 
-void startup()
-{
+void startup() {
   initscr();
   clear();
   noecho();
   cbreak();
 }
 
-void endCurses()
-{
+void endCurses() {
   mvcur( 0, COLS - 1, LINES -1 , 0 );
   clear();
   refresh();
   endwin();
 }
 
-bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, bool &munchieFound )
-{
+bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, bool &munchieFound ) {
 
   bool gameOver = false;
   //Cell head ( &(worm->getHead()) );
@@ -109,8 +104,7 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
 
   worm->addNewHead( head );
 
-  if( screen->isAMunchieCell( head ) )
-    {
+  if( screen->isAMunchieCell( head ) ) {
       munchieFound = true;
       //std::cout << "INCREASE\n";
 
@@ -126,7 +120,7 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
       refresh();
       
       //worm->increaseLength ( screen[ munchie.getRow(), munchie.getColumn() ] );
-    }
+  }
 
   if( ! (screen->makeWormCell( head )) ) {
     gameOver = true;
@@ -134,13 +128,12 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
 
 
   // this reduces the length of the number of cells to add.
-  if( worm->getLength() > 0 ){
+  if( worm->getLength() > 0 ) {
     //std::cout << "reducing length\n";
 	  worm->reduceLength();
   }
 
-  if( worm->getLength() == 0 )
-    {
+  if( worm->getLength() == 0 ) {
       // if isAMunchie returns a number
       // increase worm by this length
       worm->removeTail();
@@ -151,7 +144,7 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
       col = tail.getColumn();
       screen->makeVacantCell( row, col );      
       
-    }
+  }
 
   if( munchieFound  && false)
     {
@@ -179,13 +172,7 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
   // return true for quit or death
   // else return false
 
-  if( moveDir == 'q' ) // to quit
-    return true; 
-  else if ( gameOver == true ) // game over
-    return true;
-  else                 // keep playing
-    return false;
-}
+  if( moveDir == 'q' || gameOver == true ) return true;
 
 void drawScreen( ScreenImage * screen, WormBody * worm )
 {
@@ -198,5 +185,6 @@ void drawScreen( ScreenImage * screen, WormBody * worm )
     Draw worm
     Draw score
   */
+  return false;
 }
 
