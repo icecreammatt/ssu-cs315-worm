@@ -122,14 +122,14 @@ bool ScreenImage::isAMunchieCell( int row, int col )
 }
 
 // this returns a type cell what do i use it for?
-Cell ScreenImage::makeMunchieCell()
+void ScreenImage::makeMunchieCell()
 {
 
   //srand( getpid() );
   srand( time(NULL) );
   int random = rand() % freePoolIdx;  
 
-  Cell randCell( freePool[random] );
+  Cell randCell = freePool[random];
 
   munchie = randCell;
 

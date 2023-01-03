@@ -137,12 +137,11 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
       
   }
 
-  if( munchieFound  && false)
-    {
+  if( munchieFound ) {
       // this bit is causing segfault
       screen->makeMunchieCell();
       munchieFound = false;
-    }
+  }
   // get tail and then pass it to makeVacant
   //update screen make vacant
 

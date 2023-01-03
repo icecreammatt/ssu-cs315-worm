@@ -65,7 +65,7 @@ public:
        Choose a vacant cell, turn it into a munchie cell and return a
        munchie cell with matching (row, column) pair.
     */
-  Cell makeMunchieCell(); // should print munchie in this function
+  void makeMunchieCell(); // should print munchie in this function
     
     /**
        Initially, we set all cells in on the screen to UNUSED.  Then
