@@ -9,9 +9,9 @@ ScreenImage::ScreenImage( int rows, int cols,  WormBody *worm )
 
   // preload the grid with free spots
   freePoolIdx = 0;
-  for( int y = 0; y < rows; y++ ) {
+  for( int y = 1; y < rows; y++ ) {
       for( int x = 0; x < cols; x++ ) {
-    	  if(y == 0 || y == rows-1) {
+    	  if(y == 1 || y == rows-1) {
   	      screen[y][x] = -1;
   	      mvaddch( y, x, '#' );
   	    } else if(x == 0 || x == cols-1) {
