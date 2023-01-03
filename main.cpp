@@ -59,6 +59,7 @@ void startup() {
   clear();
   noecho();
   cbreak();
+  curs_set(0);
 }
 
 void endCurses() {
