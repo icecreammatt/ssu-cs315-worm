@@ -33,12 +33,13 @@ int main() {
 
   int score = 0;
   bool quit = false;
-  char moveDir;
+  char moveDir = 'l';
   bool munchieFound = true;
   
   while(quit == false) {
       // get input
       moveDir = get_char();
+      if (moveDir == ' ') { moveDir = 'l'; }
       
       // run logic (returns quit)
       quit = logic(screen, worm, moveDir, score, munchieFound);

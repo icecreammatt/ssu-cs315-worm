@@ -4,11 +4,6 @@
 
 Issues with Program
 
-When first starting if you do not put in any input the game will end after the worm makes its first move. Either move to the right or down.
-
-The worm will not die till it passes through top of wall until it gets to one less than the top. I think this is due to an off by one error in my collision checking.
-The samething also happens on the bottom, but the worm dies in the column right before the bottom of the screen.
-
 Munchies can appear inside the worms body as I didn't have enough time to fully implement an auto updating free pool.
 
 Munchies can also appear inside of the top wall due to the same reasons that the worm can walk inside the top wall.
