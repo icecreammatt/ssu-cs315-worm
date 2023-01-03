@@ -16,7 +16,6 @@ void startup();
 void endCurses();
 
 bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, bool &munchieFound );
-void drawScreen( ScreenImage * screen, WormBody * worm);
 
 int main() {
   startup();
@@ -166,17 +165,5 @@ bool logic( ScreenImage * screen, WormBody * worm, char moveDir, int &score, boo
 
   if( moveDir == 'q' || gameOver == true ) return true;
 
-void drawScreen( ScreenImage * screen, WormBody * worm )
-{
-  return;
-  //worm->print();   // call once
-  // worm body
-
-  /*
-    Draw sceen
-    Draw worm
-    Draw score
-  */
   return false;
 }
-
