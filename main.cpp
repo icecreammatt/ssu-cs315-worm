@@ -25,7 +25,7 @@ int main() {
   WormBody *worm;
   ScreenImage *screen;
 
-  worm = new WormBody(14, 2, 8);
+  worm = new WormBody(14, 2, 1);
   screen = new ScreenImage(24, 80, worm);
 
   mvaddstr(0, 1, "Worm");
