@@ -4,6 +4,8 @@
 
 Issues with Program
 
+Score can randomly shoot up extremely high I believe there might be some uninitalized memory
+
 Munchies can appear inside the worms body as I didn't have enough time to fully implement an auto updating free pool.
 
 Munchies can also appear inside of the top wall due to the same reasons that the worm can walk inside the top wall.
@@ -11,5 +13,3 @@ Munchies can also appear inside of the top wall due to the same reasons that the
 I didn't have enough time to get it so the tail was different than the head.
 
 In the very beginning the worm can go through itself because the freepool isn't updated, but after it moves out of the initial position it will collide with itself.
-
-For the best testing experience I would just make it go to the right for about 8 spaces then everything should work as expected unless otherwise noted above.
