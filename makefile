@@ -1,5 +1,5 @@
-worm.x: main.o game.o ScreenImage.o WormBody.o Cell.o getChar.o
-	g++ -ggdb -o worm.x main.o game.o ScreenImage.o WormBody.o Cell.o getChar.o -lncurses
+worm: main.o game.o ScreenImage.o WormBody.o Cell.o getChar.o
+	g++ -ggdb -o worm main.o game.o ScreenImage.o WormBody.o Cell.o getChar.o -lncurses
 
 main.o: main.cpp game.hpp ScreenImage.hpp Cell.hpp WormBody.hpp
 	gcc -ggdb -c main.cpp -lncurses
@@ -20,7 +20,7 @@ getChar.o: getChar.cpp
 	gcc -ggdb -c getChar.cpp -lncurses
 
 clean:
-	rm *.o worm.x
+	rm *.o worm
 
 backup:
 	cp * ~/backupWorm/
