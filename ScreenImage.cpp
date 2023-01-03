@@ -154,8 +154,8 @@ int ScreenImage::getMunchieSize()
 }
 
 
-bool ScreenImage::isUnused( int row, int col ){}
-void ScreenImage::makeWallCell( int row, int col ){}
+bool ScreenImage::isUnused( int row, int col ) { return false; }
+void ScreenImage::makeWallCell( int row, int col ) {}
 /*
 void ScreenImage::print()
 {
