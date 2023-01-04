@@ -8,10 +8,10 @@ ScreenImageImage.o: ScreenImage.hpp ScreenImage.cpp Cell.hpp WormBody.hpp
 	gcc -ggdb -c ScreenImage.cpp -lncurses
 
 WormBody.o: WormBody.hpp WormBody.cpp Cell.hpp
-	gcc -ggdb -c WormBody.cpp -lncurses
+	gcc -ggdb -c WormBody.cpp
 
 game.o: game.hpp game.cpp WormBody.hpp ScreenImage.hpp Cell.hpp
-	gcc -ggdb -c game.cpp -lncurses
+	gcc -ggdb -c game.cpp
 
 Cell.o: Cell.hpp Cell.cpp
 	gcc -ggdb -c Cell.cpp -lncurses
