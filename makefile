@@ -21,6 +21,12 @@ getChar.o: getChar.cpp
 
 clean:
 	rm *.o worm
+	# rm ./bin/worm
+	# rmdir bin
+
+# install:
+	# mkdir ./bin
+	# cp worm ./bin/worm
 
 backup:
 	cp * ~/backupWorm/
