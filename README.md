@@ -7,9 +7,17 @@ Class: CS315: Project 4 - Worm
 
 Run `nix-shell` to create a build environment and run the initial compile. Run `make` for subsequent builds.
 
+### Building with flakes
+
+Run `nix build .` to build
+
 ## Running
 
 Run `./worm` to start the game.
+
+### Running with flakes
+
+Run `nix run` or `./result/bin/worm`
 
 ## Controls
 
