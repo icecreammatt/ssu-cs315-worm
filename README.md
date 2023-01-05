@@ -3,9 +3,10 @@
 Author: Matt Carrier  
 Class: CS315: Project 4 - Worm  
 
-## Building
+## Local Dev Shell
 
-Run `nix-shell` to create a build environment and run the initial compile. Run `make` for subsequent builds.
+- `nix develop -c $SHELL`
+- Run `make` for subsequent builds.
 
 ### Building with flakes
 

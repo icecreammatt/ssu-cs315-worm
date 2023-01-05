@@ -12,6 +12,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/22.11";
 
     utils.url = "github:numtide/flake-utils";
+
   };
 
   outputs = { self, nixpkgs, ... }@inputs: inputs.utils.lib.eachSystem [
@@ -43,9 +44,14 @@
 
       # Setting up the environment variables you need during
       # development.
+      # Todo figure out why I can't use clang on Asahi but can on Darwin
+      # Use "clang++" for most systems but OSX Asahi requires g++ for some reason or a runtime error occurs
       shellHook = let
         icon = "f121";
       in ''
+        #export COMPILER="clang++"
+        export COMPILER="g++"
+        make
       '';
     };
 
