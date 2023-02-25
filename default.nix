@@ -2,7 +2,7 @@
 
 llvmPackages_11.stdenv.mkDerivation rec {
   pname = "worm";
-  version = "0.1.0";
+  version = "0.1.1";
   
   src = ./.;
 
