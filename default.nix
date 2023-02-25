@@ -10,7 +10,7 @@ llvmPackages_11.stdenv.mkDerivation rec {
 
   buildInputs = [ ncurses6 ];
 
-  buildPhase = "make";
+  buildPhase = "COMPILER='clang++' make";
 
   installPhase = "mkdir -p $out/bin; install -t $out/bin worm";
 
