@@ -49,7 +49,7 @@
 
     # This is used when running `nix build`
     packages.default = pkgs.llvmPackages_14.stdenv.mkDerivation rec {
-      pname = "worm";
+      name = "worm";
       version = "0.1.1";
   
       src = self;
