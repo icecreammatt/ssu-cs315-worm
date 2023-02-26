@@ -56,12 +56,10 @@
       '';
     };
 
-    # packages.default = pkgs.callPackage ./default.nix {};
     packages.default = pkgs.llvmPackages_14.stdenv.mkDerivation rec {
       pname = "worm";
       version = "0.1.1";
   
-      # src = ./.;
       src = self;
 
       nativeBuildInputs = [ ];
