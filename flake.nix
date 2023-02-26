@@ -56,6 +56,31 @@
       '';
     };
 
-    packages.default = pkgs.callPackage ./default.nix {};
+    # packages.default = pkgs.callPackage ./default.nix {};
+    packages.default = pkgs.llvmPackages_14.stdenv.mkDerivation rec {
+      pname = "worm";
+      version = "0.1.1";
+  
+      # src = ./.;
+      src = self;
+
+      nativeBuildInputs = [ ];
+
+      buildInputs = [ pkgs.ncurses6 ];
+
+      buildPhase = "COMPILER='clang++' make";
+
+      installPhase = "mkdir -p $out/bin; install -t $out/bin worm";
+
+      cmakeFlags = [ ];
+
+      meta = with inputs.utils.lib; {
+        homepage = "https://github.com/icecreammatt/ssu-cs315-worm";
+        description = ''
+          Terminal CLI Worm Game
+        '';
+      };
+    };
   });
+
 }
