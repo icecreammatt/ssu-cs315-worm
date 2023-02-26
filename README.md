@@ -8,6 +8,11 @@ Class: CS315: Project 4 - Worm
 - `nix develop -c $SHELL`
 - Run `make` for subsequent builds.
 
+## Build and run with nix
+
+- `nix build`
+- `nix run`
+
 ### Building with flakes
 
 Run `nix build .` to build
